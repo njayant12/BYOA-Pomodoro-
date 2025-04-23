@@ -6,23 +6,33 @@
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <div class="pomodoro-container">
-            <h1>Focus Timer</h1>
+            <div class="header">
+                <h1>Focus Timer</h1>
+                <button id="toggleMode" class="mode-icon work-mode" title="Switch Mode">
+                    <span class="material-icons">wb_sunny</span>
+                </button>
+            </div>
             <div class="timer-label">Time Remaining</div>
-            <div class="timer" id="timer">25:00</div>
+            <div class="timer-container">
+                <div class="timer" id="timer">25:00</div>
+            </div>
             <p class="mode-status">
                 Current Mode: <span class="mode-label" id="modeDisplay">Work</span>
             </p>
             <div class="controls">
                 <button id="start">Start</button>
+                <button id="addTime" class="add-time-btn" title="Add 5 Minutes">
+                    <span class="material-icons">add</span>
+                    <span>5min</span>
+                </button>
                 <button id="pause">Pause</button>
                 <button id="reset">Reset</button>
-            </div>
-            <div class="mode-selector">
-                <button id="toggleMode" class="work-mode">Switch to Rest Mode</button>
             </div>
         </div>
     </div>
